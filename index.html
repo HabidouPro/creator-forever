@@ -1,56 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Creative Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creator-Forever</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
-      font-family: sans-serif;
-      background: #000000;
-      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #222;
+    }
+
+    .signin-btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: transparent;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .signin-btn:hover {
+      background-color: #555;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-top: 20%;
+      padding: 2rem;
     }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    p {
-      font-size: 1.2em;
+
+    main p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
       color: #555;
     }
-	button {
-		background-color:rgb(0, 191, 255);
-		color:black;
-		height: 70px;
-		width: 200px;
-		font-size: 20px;
-	}
+
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      background-color: #f1f1f1;
+    }
   </style>
 </head>
 <body>
-	<div id="userGreeting"></div>
-		<button id="signInBtn" onclick="signInWithGoogle()">Sign in with Google</button>
-	</div>
-	<h1>Blogging website for the most creative minds.</h1>
-	<p>Are you a creative mind? Find it out right now by making a blog.</p>
-	<button type="button">Get Started</button>
 
-	<footer>
-		&copy; 2025 CREATOR FOREVER | Made with ♥ for creators everywhere
-	</footer>
+  <header>
+    <h1>Creator-Forever</h1>
+    <button class="signin-btn">Sign In</button>
+  </header>
 
-	<!-- Firebase App (the core SDK) -->
-	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <main>
+    <h2>Blogging website for the most creative minds.</h2>
+    <p>Are you a creative mind? Find it out right now by making a blog.</p>
+    <button class="cta-button">Get Started</button>
+  </main>
 
-	<!-- Firebase Authentication -->
-	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <footer>
+	&copy; 2025 CREATOR FOREVER | Made with ♥ for creators everywhere. 
+  All rights reserved.
+  </footer>
 
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-	<!-- Firebase config file -->
-	<script src="auth/firebase-config.js"></script>
-	<script src="auth/auth.js"></script>
 </body>
 </html>
